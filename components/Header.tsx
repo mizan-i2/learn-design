@@ -32,12 +32,7 @@ export default function Header() {
 
   useEffect(() => {
     const saved = localStorage.getItem(THEME_KEY);
-    const preferred =
-      saved === "light" || saved === "dark"
-        ? saved
-        : window.matchMedia("(prefers-color-scheme: light)").matches
-          ? "light"
-          : "dark";
+    const preferred = saved === "light" || saved === "dark" ? saved : "dark";
     setTheme(preferred);
     document.documentElement.setAttribute("data-theme", preferred);
   }, []);
