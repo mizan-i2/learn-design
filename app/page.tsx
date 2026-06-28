@@ -1,37 +1,6 @@
-import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
+import ExploreBlocks from "@/components/ExploreBlocks";
 import HeroSlider from "@/components/HeroSlider";
-
-const exploreCards = [
-  {
-    href: "/about",
-    num: "01",
-    title: "Who We Are",
-    description: "Our story, values, team, and why clients choose to work with us.",
-    link: "Read more →",
-  },
-  {
-    href: "/projects",
-    num: "02",
-    title: "Projects",
-    description: "Sectors we serve and sample project case studies across industries.",
-    link: "View projects →",
-  },
-  {
-    href: "/services",
-    num: "03",
-    title: "Services",
-    description: "Steel detailing, BIM, estimating, resource support, and more.",
-    link: "View services →",
-  },
-  {
-    href: "/contact",
-    num: "04",
-    title: "Contact",
-    description: "Request a quote, schedule a call, or send us your project brief.",
-    link: "Get in touch →",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -47,25 +16,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section home-pages">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-label">Explore</span>
-            <h2>Find what you need</h2>
-            <p>Each section of our site has its own page with full details.</p>
-          </div>
-          <div className="page-cards">
-            {exploreCards.map((card) => (
-              <Link key={card.href} href={card.href} className="page-card">
-                <span className="page-card-num">{card.num}</span>
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-                <span className="page-card-link">{card.link}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ExploreBlocks />
 
       <CtaBanner
         title="It's in the detail"
