@@ -29,8 +29,8 @@
   --color-card-overlay: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.4) 60%, rgba(10, 10, 10, 0.2) 100%);
   --color-theme-toggle-bg: rgba(255, 255, 255, 0.06);
   --color-theme-toggle-border: rgba(255, 255, 255, 0.12);
-  --font-sans: "DM Sans", system-ui, sans-serif;
-  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), "Instrument Serif", Georgia, serif;
   --radius: 12px;
   --radius-lg: 20px;
   --header-h: 72px;
