@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CtaBanner from "@/components/CtaBanner";
 import PageHero from "@/components/PageHero";
+import { pageBanners } from "@/lib/data/pageBanners";
 import ProjectsView from "@/components/ProjectsView";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function ProjectsPage() {
         label="Our Work"
         title="Projects by Category"
         description="Browse our portfolio by sector — the same categories we deliver across mining, infrastructure, commercial, and institutional builds."
+        image={pageBanners.projects}
         compact
       />
 

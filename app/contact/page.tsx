@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import PageHero from "@/components/PageHero";
+import { pageBanners } from "@/lib/data/pageBanners";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -30,6 +31,7 @@ export default function ContactPage() {
         label="Contact"
         title="Let's talk about your project"
         description="Share your scope, timeline, and standards. We respond within one business day."
+        image={pageBanners.contact}
       />
 
       <section className="section contact">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CtaBanner from "@/components/CtaBanner";
 import PageHero from "@/components/PageHero";
+import { pageBanners } from "@/lib/data/pageBanners";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -116,6 +117,7 @@ export default function ServicesPage() {
         label="What We Do"
         title="Our Services"
         description="End-to-end steel detailing and construction modeling support—delivered to your standards, on schedule, and with clear communication at every revision."
+        image={pageBanners.services}
       />
 
       <section className="section services">
