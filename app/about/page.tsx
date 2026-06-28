@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 import PageHero from "@/components/PageHero";
+import { pageBanners } from "@/lib/data/pageBanners";
 
 export const metadata: Metadata = {
   title: "Who We Are",
@@ -62,6 +63,7 @@ export default function AboutPage() {
         label="Who We Are"
         title="Built on precision, driven by partnership"
         description="Precision Steel Detailing Services is a dedicated steel detailing and construction modeling team focused on quality, clarity, and dependable delivery."
+        image={pageBanners.about}
       />
 
       <section className="section about">

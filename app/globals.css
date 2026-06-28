@@ -277,27 +277,74 @@ a {
   border-bottom-color: var(--color-accent-red);
 }
 
-/* Page hero (inner pages) */
-.page-hero {
-  padding-top: calc(var(--header-h) + 4rem);
+/* Page banner (inner pages) */
+.page-hero-banner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(300px, 42vh, 420px);
+  padding-top: calc(var(--header-h) + 3rem);
   padding-bottom: 3.5rem;
-  background: var(--color-bg-elevated);
+  overflow: hidden;
   border-bottom: 1px solid var(--color-border);
 }
 
-.page-hero h1 {
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--banner-img) center / cover no-repeat;
+}
+
+.page-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.94) 0%,
+    rgba(10, 10, 10, 0.72) 45%,
+    rgba(10, 10, 10, 0.45) 100%
+  );
+}
+
+[data-theme="light"] .page-hero-bg::after {
+  background: linear-gradient(
+    to top,
+    rgba(28, 36, 48, 0.92) 0%,
+    rgba(28, 36, 48, 0.68) 45%,
+    rgba(28, 36, 48, 0.4) 100%
+  );
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-banner h1 {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 1rem;
   max-width: 720px;
+  color: #fff;
 }
 
-.page-hero p {
-  color: var(--color-muted);
+.page-hero-banner p {
+  color: rgba(255, 255, 255, 0.85);
   max-width: 620px;
   font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.page-hero-banner .section-label {
+  color: var(--color-accent-red);
+  background: rgba(255, 255, 255, 0.95);
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.1em;
 }
 
 .section-link {
@@ -395,6 +442,8 @@ a {
 }
 
 .page-hero-compact {
+  min-height: clamp(240px, 32vh, 320px);
+  padding-top: calc(var(--header-h) + 2rem);
   padding-bottom: 2.5rem;
 }
 
